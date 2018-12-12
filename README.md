@@ -1,10 +1,9 @@
 # Omnipay: Converge
 
-**Dummy driver for the Omnipay PHP payment processing library**
+**Converge driver for the Omnipay PHP payment processing library**
 
-[![Build Status](https://travis-ci.org/thephpleague/omnipay-dummy.png?branch=master)](https://travis-ci.org/owldesign/omnipay-converge)
-[![Latest Stable Version](https://poser.pugx.org/omnipay/dummy/version.png)](https://packagist.org/packages/owldesign/omnipay-converge)
-[![Total Downloads](https://poser.pugx.org/omnipay/dummy/d/total.png)](https://packagist.org/packages/owldesign/omnipay-converge)
+[![Latest Stable Version](https://poser.pugx.org/owldesign/omnipay-converge/version.png)](https://packagist.org/packages/owldesign/omnipay-converge)
+[![Total Downloads](https://poser.pugx.org/owldesign/omnipay-converge/d/total.png)](https://packagist.org/packages/owldesign/omnipay-converge)
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
 processing library for PHP 5.3+. This package implements Converge pay support for Omnipay.
