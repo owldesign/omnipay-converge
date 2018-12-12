@@ -1,0 +1,38 @@
+{
+    "name": "owldesign/omnipay-converge",
+    "type": "library",
+    "version": "1.0.0",
+    "description": "Converge pay driver for the Omnipay payment processing library",
+    "keywords": [
+        "converge",
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment"
+    ],
+    "homepage": "https://github.com/owldesign/omnipay-converge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vadim Goncharov",
+            "email": "vadim@owl-design.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\Converge\\" : "src/" }
+    },
+    "require": {
+        "omnipay/common": "~3.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "~3.0",
+        "squizlabs/php_codesniffer": "~3.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    },
+    "prefer-stable": true
+}
