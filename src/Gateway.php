@@ -75,7 +75,7 @@ class Gateway extends AbstractGateway
             'userId' => '',
             'pin' => '',
             'ssl_show_form' => false,
-            'ssl_result_format' => 'ASII'
+            'ssl_result_format' => 'ASCII'
         );
     }
 
