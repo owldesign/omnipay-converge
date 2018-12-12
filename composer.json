@@ -1,7 +1,6 @@
 {
     "name": "owldesign/omnipay-converge",
     "type": "library",
-    "version": "1.0.0",
     "description": "Converge pay driver for the Omnipay payment processing library",
     "keywords": [
         "converge",
