@@ -29,6 +29,8 @@ class AuthorizeRequest extends AbstractRequest
                 'ssl_cvv2cvc2_indicator' => ($this->getCard()->getCvv()) ? 1 : 0,
                 'ssl_first_name' => $this->getCard()->getFirstName(),
                 'ssl_last_name' => $this->getCard()->getLastName(),
+                'ssl_email' => $this->getCard()->getEmail(),
+                'ssl_phone' => $this->getCard()->getPhone(),
                 'ssl_avs_address' => $this->getCard()->getAddress1(),
                 'ssl_address2' => $this->getCard()->getAddress2(),
                 'ssl_city' => $this->getCard()->getCity(),
