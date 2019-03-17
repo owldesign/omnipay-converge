@@ -71,12 +71,34 @@ class Gateway extends AbstractGateway
     public function getDefaultParameters()
     {
         return array(
-            'merchantId' => '',
-            'userId' => '',
-            'pin' => '',
-            'ssl_show_form' => false,
-            'ssl_result_format' => 'ASCII'
+            'merchantId'        => '',
+            'userId'            => '',
+            'pin'               => '',
+            'ssl_show_form'     => false,
+            'ssl_result_format' => 'ASCII',
+            'type'              => 'CreditCard', //CreditCard || ECheckACH
         );
+    }
+
+    /**
+     * Get the merchant ID
+     *
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->getParameter('type');
+    }
+
+    /**
+     * Set the merchant ID
+     *
+     * @param $value
+     * @return Gateway
+     */
+    public function setType($value)
+    {
+        return $this->setParameter('type', $value);
     }
 
     /**
@@ -177,7 +199,11 @@ class Gateway extends AbstractGateway
      */
     public function purchase(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Converge\Message\PurchaseRequest', $parameters);
+      if ('ECheckACH' === $this->getType()) {
+        return $this->createRequest('\Omnipay\Converge\Message\ECheckACHPurchaseRequest', $parameters);
+      }
+
+      return $this->createRequest('\Omnipay\Converge\Message\PurchaseRequest', $parameters);
     }
 
     /**
