@@ -12,6 +12,65 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->getTestMode() ? $this->testEndpoint : $this->liveEndpoint;
     }
 
+    public function getSslAbaNumber()
+    {
+        return $this->getParameter('ssl_aba_number');
+    }
+
+    public function setSslAbaNumber($value)
+    {
+        return $this->setParameter('ssl_aba_number', $value);
+    }
+
+    public function getSslBankAccountNumber() {
+      return $this->getParameter('ssl_bank_account_number');
+    }
+
+    public function setSslBankAccountNumber($value) {
+      $this->setParameter('ssl_bank_account_number', $value);
+    }
+
+    public function getSslBankAccountType() {
+      return $this->getParameter('ssl_bank_account_type');
+    }
+
+    public function setSslBankAccountType($value) {
+      $this->setParameter('ssl_bank_account_type', $value);
+    }
+
+    public function getSslAgree() {
+      return $this->getParameter('ssl_agree');
+    }
+
+    public function setSslAgree($value) {
+      $this->setParameter('ssl_agree', $value);
+    }
+
+    public function getSslFirstName() {
+      return $this->getParameter('ssl_first_name');
+    }
+
+    public function setSslFirstName($value) {
+      $this->setParameter('ssl_first_name', $value);
+    }
+
+    public function getSslLastName() {
+      return $this->getParameter('ssl_last_name');
+    }
+
+    public function setSslLastName($value) {
+      $this->setParameter('ssl_last_name', $value);
+    }
+
+    public function getSslCompany() {
+      return $this->getParameter('ssl_company');
+    }
+
+    public function setSslCompany($value) {
+      $this->setParameter('ssl_company', $value);
+    }
+
+
     public function getMerchantId()
     {
         return $this->getParameter('merchantId');
