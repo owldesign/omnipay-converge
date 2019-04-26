@@ -157,7 +157,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             'ssl_merchant_id' => $this->getMerchantId(),
             'ssl_user_id' => $this->getUserId(),
             'ssl_pin' => $this->getPin(),
-            'ssl_test_mode' => ($this->getTestMode() && !$this->getIntegrationTesting()) ? 'true' : 'false',
+            'ssl_test_mode' => (('true' === $this->getTestMode()) && !$this->getIntegrationTesting()) ? 'true' : 'false',
             'ssl_show_form' => ($this->getSslShowForm() && ($this->getSslShowForm() != 'false')) ? 'true' : 'false',
             'ssl_result_format' => $this->getSslResultFormat(),
             'ssl_invoice_number' => $this->getSslInvoiceNumber(),
